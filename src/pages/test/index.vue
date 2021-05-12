@@ -5,13 +5,16 @@
 </template>
 
 <script>
+import { before } from "../../decorator/test";
+
 export default {
   name: "Test",
   components: {},
-  onLoad(){
-    console.info('ssss')
+  onLoad() {
+    console.info("ssss");
   },
   methods: {
+    @before()
     goto() {
       Taro.navigateTo({ url: "/pages/test/index" });
     },
